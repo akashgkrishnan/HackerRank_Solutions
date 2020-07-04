@@ -9,3 +9,4 @@ for i in array:
         print(i)
         break
     left_sum += i
+    
