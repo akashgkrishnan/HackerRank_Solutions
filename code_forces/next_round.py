@@ -1,17 +1,15 @@
-def helper(scores, threshold):
-    if threshold == 0:
-        return 0
+def helper(scores, k):
+    threshold = scores[k-1]
 
-    count =0
-
-    for i in scores:
-        if i >= threshold:
+    count = 0
+    for score in scores:
+        if score >= threshold and score > 0:
             count += 1
-
     return count
+
 
 n, k = list(map(int, input().split()))
 scores = list(map(int, input().split()))
-threshold = scores[k -1]
+threshold = k
 
-print(helper(scores, threshold))
+print(helper(scores, k))
