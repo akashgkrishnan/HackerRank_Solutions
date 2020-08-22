@@ -16,9 +16,9 @@ def solve():
 
     i = 0
     j = 0
-    maxDiff = -1
+    maxDiff = 0
     while j < n and i < n:
-        if leftMin[i] < rightMax[j]:
+        if leftMin[i] <= rightMax[j]:
             maxDiff = max(maxDiff, j - i)
             j += 1
         else:
